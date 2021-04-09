@@ -1,2 +1,2 @@
 # proxy-server
-Proxy Server
+Proxy Server for the mud client

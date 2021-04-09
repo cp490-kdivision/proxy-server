@@ -26,3 +26,21 @@ app.use('', (req, res, next) => {
     res.sendStatus(403);
   }
 });
+
+
+// We will send request pointing to /json_placeholder to the JSONPlaceholder API
+// Proxy endpoints
+app.use('/json_placeholder', createProxyMiddleware({
+  target: API_SERVICE_URL,
+  changeOrigin: true,
+  pathRewrite: {
+    [`^/json_placeholder`]: '',
+  },
+}));
+
+
+// Start the Proxy
+
+app.listen(PORT, HOST, () => {
+  console.log(`Starting Proxy at ${HOST}:${PORT}`);
+});

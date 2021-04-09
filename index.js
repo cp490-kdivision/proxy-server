@@ -44,3 +44,10 @@ app.use('/json_placeholder', createProxyMiddleware({
 app.listen(PORT, HOST, () => {
   console.log(`Starting Proxy at ${HOST}:${PORT}`);
 });
+
+
+// yarn start
+// curl localhost:3000/info
+
+// GET Request
+// curl -H "Authorization: prince" localhost:3000/json_placeholder/posts/1

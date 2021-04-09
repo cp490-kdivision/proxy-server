@@ -12,3 +12,8 @@ const API_SERVICE_URL = "https://jsonplaceholder.typicode.com";
 
 // Logging
 app.use(morgan('dev'));
+
+// Info GET endpoint
+app.get('/info', (req, res, next) => {
+  res.send('This is a proxy service which should represent MUD client');
+});

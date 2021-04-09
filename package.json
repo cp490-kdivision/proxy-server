@@ -1,0 +1,16 @@
+{
+  "name": "proxy-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cp490-kdivision/proxy-server.git",
+  "author": "Prince Fefar <pfefar@confederationcollege.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.1.0",
+    "morgan": "^1.10.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

@@ -8,6 +8,8 @@ const app = express();
 // Configuration
 const PORT = 3000;
 const HOST = "localhost";
+
+//Currently I am using a substitute api for the feedback 
 const API_SERVICE_URL = "https://jsonplaceholder.typicode.com";
 
 // Logging

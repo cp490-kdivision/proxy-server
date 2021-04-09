@@ -17,3 +17,12 @@ app.use(morgan('dev'));
 app.get('/info', (req, res, next) => {
   res.send('This is a proxy service which should represent MUD client');
 });
+
+// Authorization (sends 403 (Forbidden) if the Authorization Header is missing)
+app.use('', (req, res, next) => {
+  if (req.headers.authorization) {
+    next();
+  } else {
+    res.sendStatus(403);
+  }
+});
